@@ -9,11 +9,11 @@ return new class extends Migration {
     {
         Schema::create('books', function (Blueprint $table) {
             $table->id();
-            $table->string('title');
-            $table->foreignId('author_id')->constrained()->onDelete('cascade');
-            $table->foreignId('genre_id')->constrained()->onDelete('cascade');
+            $table->string('title', 255);
+            $table->foreignId('author_id')->constrained('authors')->onDelete('cascade');
+            $table->foreignId('genre_id')->constrained('genres')->onDelete('cascade');
             $table->integer('published_year')->nullable();
-            $table->string('isbn')->unique();
+            $table->string('isbn', 50)->unique();
             $table->text('summary')->nullable();
             $table->boolean('is_active')->default(true);
             $table->timestamps();

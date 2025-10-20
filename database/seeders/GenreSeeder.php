@@ -10,14 +10,16 @@ class GenreSeeder extends Seeder
     public function run(): void
     {
         Genre::create([
-            'name'        => 'Fiksi',
-            'description' => 'Cerita fiksi dan imajinasi',
+            'name'        => 'Novel',
+            'slug'        => 'novel',
+            'description' => 'Karya sastra berbentuk prosa panjang',
             'is_active'   => true,
         ]);
 
         Genre::create([
             'name'        => 'Sejarah',
-            'description' => 'Buku tentang sejarah dunia dan lokal',
+            'slug'        => 'sejarah',
+            'description' => 'Buku yang menceritakan peristiwa masa lalu',
             'is_active'   => true,
         ]);
     }

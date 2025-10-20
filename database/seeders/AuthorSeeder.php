@@ -11,14 +11,14 @@ class AuthorSeeder extends Seeder
     {
         Author::create([
             'name'        => 'Andrea Hirata',
-            'biography'   => 'Penulis novel Laskar Pelangi',
+            'biography'   => 'Penulis Laskar Pelangi',
             'birth_year'  => 1967,
             'nationality' => 'Indonesia',
         ]);
 
         Author::create([
             'name'        => 'Pramoedya Ananta Toer',
-            'biography'   => 'Sastrawan besar Indonesia',
+            'biography'   => 'Penulis Bumi Manusia',
             'birth_year'  => 1925,
             'nationality' => 'Indonesia',
         ]);
